@@ -4,6 +4,12 @@ module "rg" {
   location = "australia east"
 }
 
+module "rg2" {
+  source   = "../child/RG"
+  name     = "rohit-rg2"
+  location = "australia east"
+}
+
 module "rg1" {
   source   = "../child/RG"
   name     = "rohit-rg1"
