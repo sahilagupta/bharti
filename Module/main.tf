@@ -4,6 +4,13 @@ module "rg" {
   location = "australia east"
 }
 
+module "rg2" {
+  source   = "../child/RG"
+  name     = "rohit-rg2"
+  location = "australia east"
+}
+
+
 module "vnet" {
   depends_on          = [module.rg]
   source              = "../child/VNET"
